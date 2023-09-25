@@ -1,6 +1,7 @@
 # AdmitKart Assignment
 
 This project consists of a frontend React application and a backend server for mobile OTP verification.
+Also Have the Demo Video of the Output as per the Assignment.
 
 ## Installation
 
