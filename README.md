@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# AdmitKart Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project consists of a frontend React application and a backend server for mobile OTP verification.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Follow these steps to set up and run the project:
 
-### `npm start`
+### Step 1: Clone the Repositories
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+First, clone both the master repository (frontend) and the backend repository. Open your terminal and run:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+# Clone the frontend repository
+git clone https://github.com/hridik67/AdmitKart_Assignment.git
 
-### `npm test`
+# Clone the backend repository
+git clone https://github.com/hridik67/MobileOtpBackend.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 2: Configure Backend
+1.Navigate to the MobileOtpBackend directory:
+cd MobileOtpBackend
 
-### `npm run build`
+2.Create a .env file in the root of the MobileOtpBackend directory and add your MongoDB connection URL. Replace <your-mongo-url> with your actual MongoDB URL:
+MONGO_URI=<your-mongo-url>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3.In the userController.js file, located in the root directory of MobileOtpBackend, add your Twilio account details: accountSid, authToken, and twilioNumber. These details are required for sending SMS messages using Twilio.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Step 3: Run the Backend
+Start the backend server by running the following command in the MobileOtpBackend directory:
+node index.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Step 4: Run the React Project
+1.Navigate to the AdmitKart_Assignment directory:
+cd ../AdmitKart_Assignment
 
-### `npm run eject`
+2.Install the project dependencies:
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3.Start the React project:
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The React project should now be running, and you can access it in your web browser at http://localhost:3000/.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Usage
+Describe how to use your project or any other relevant information.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+License
+This project is licensed under the [License Name] License - see the LICENSE.md file for details.
 
-## Learn More
+Acknowledgments
+Mention any libraries, frameworks, or tools used, and give credit to their creators if necessary.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please ensure that you have the correct MongoDB connection URL, Twilio account details, and any other necessary configurations for your project. Users who clone these repositories can follow these instructions to set up and run the project successfully.
